@@ -1,0 +1,63 @@
+.rule
+	&_title
+		fz: 16px
+		ls: 100
+		c cCoffee
+		fw fBold
+
+	&_row
+		display: flex
+
+		.rule
+			&_rule
+				position: relative
+				
+				&:not(:first-child)
+					ml: 120px
+
+					&:before
+						content: ''
+						width: 2px
+						height: 180px
+						background: cGrayD
+						position: absolute
+						top	0
+						left -36px
+
+	&_rule
+		mt: 18px
+
+	&_num
+		fz: 121px
+		ls 0
+		lh 103px
+		c cWhite
+		fw fBold
+		ffa fBebas
+
+		span
+			fw fRegular
+			c cGrayL
+			ml: 10px
+		
+		&--rub
+			position: relative
+			span
+				position relative
+				&:before
+					content: ''
+					icon("ic-rub.png")
+					position: absolute
+					top: 22px
+					right: -41px
+	
+	&_description
+		fz 14px
+		ls 40
+		lh 25px
+		c cGrayL
+		mt 16px
+		padding: 12px 26px 16px 14px
+		border: 1px solid cGrayD
+		border-radius: 10px
+		display: inline-block

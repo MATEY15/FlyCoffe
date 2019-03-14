@@ -1,0 +1,22 @@
+// Modals Start
+#bg-modal
+
++b.modal#modal-call
+	+e._content
+		+e._bg
+		+e._close(data-close="#modal-call")
+		+e.H3._title Напишите нам
+		+e.FORM._form.form_(data-after="#thx")
+			+e.INPUT._field(name="name" data-clear="true" placeholder="Ваше имя")
+			+e.INPUT._field(name="phone" data-req="true" data-clear="true" placeholder="Ваш номер телефона")
+			+e.TEXTAREA._field(name="comment" data-clear="true" placeholder="Напишите...")
+			+e.BUTTON._btn.btn--fill_
+					+e.span._icon--note
+					+e.span._text Напишите нам
+
++b.modal#modal-thx
+	+e._content
+		+e._bg
+		+e._close(data-close="#modal-thx")
+		+e.H3._title Ваша заявка отправлена
+// Modals end

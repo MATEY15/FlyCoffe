@@ -1,0 +1,61 @@
+.button
+	ffa: fBebas
+	fw: fBold
+	cursor pointer
+
+	&--call
+		display inline-block
+		fz: 19px
+		ls: 40
+		lh: 50px
+		fw: fRegular
+		text-decoration none
+		color #000
+		min-height: 50px
+		pl: 30px
+		pr: 30px
+		border: 1px solid cGrayL
+	
+	&--cta
+		display inline-block
+		box-sizing: border-box
+		c cWhite
+		min-height 80px
+		fz 25px
+		ls 20
+		pl 48px
+		pr 48px
+		text-align center
+		line-height 80px
+		text-decoration none
+
+		position: relative
+		&:after
+			content: ''
+			position: absolute 0
+			size: calc(100% -10px)
+			border: 3px solid cCyan
+			border-radius: 5px
+
+		&:before
+			content: ''
+			position: absolute
+			size: calc(100% + 10px) calc(100% - 3px)
+			top: 7px
+			left: -6px
+			border: 1px solid cCyanDark
+			border-radius: 5px
+	
+	&--black-full
+		box-sizing: border-box
+		c cBlack
+		min-height 80px
+		fz 25px
+		ls 20
+		pl 48px
+		pr 48px
+		border: 3px solid cBlack
+		border-radius: 5px
+
+	&--black
+		c cBlack

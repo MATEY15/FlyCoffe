@@ -1,0 +1,42 @@
+.section--full-control
+	pt: 60px
+	pb: 174px
+	//background: url(../img/bg-black.png)
+	
+	.bg-full-control
+		position absolute
+		bottom 135px
+		right 0
+		display block
+		width 271px
+		height 334px
+		background url(../img/bg-full-control.png)
+		background-repeat no-repeat
+		opacity: .15
+	
+	.board-full-control
+		position absolute
+		bottom -510px
+		right 0
+		display block
+		width 516px
+		height 622px
+		background url(../img/board-full-control.png)
+		background-repeat no-repeat
+		opacity: 1
+		z-index 20
+	
+	.section
+		&_content--full
+			display: flex
+		&_header
+				ml: -60px
+				mt: 75px
+		&_num
+			display: inline-block
+			ml: 12px
+		&_row
+			pt: 10px
+			display: flex
+			justify-content: space-between
+			

@@ -1,0 +1,79 @@
+.section--footer
+	position relative
+	background linear-gradient(to right,#0c0b0b 0%,#101010 60%)
+	padding-top: 70px
+	padding-bottom: 96px
+	color #fff
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ""
+		display block
+		width 100%
+		height 100%
+		background-image url(../img/Noise.png)
+		mix-blend-mode overlay
+		opacity .4
+
+.list--contacts
+	position relative
+	display flex
+	flex-direction row
+	justify-content space-between
+	align-items center
+
+.contact--phone
+	display flex
+	align-items center
+	.contact_icon
+		position relative
+		width 68px
+		height 68px
+		background #333
+		border-radius 50%
+		margin-right 30px
+		overflow hidden
+		&:before
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			display block
+			background-image: url(sprite.png);
+			background-size: 335px 332px;
+			transform translate(-50%, -50%)
+		&:after
+			content ""
+			width 100%
+			height 100%
+			display: block;
+			background-image: url(../img/Noise.png)
+			mix-blend-mode: overlay;
+			opacity: .1;
+	.icon-phone-foot:before
+		background-position: -120px -225px;
+		width: 17px;
+		height: 22px;
+	.icon-email:before
+		background-position: -297px -273px;
+		width: 21px;
+		height: 16px;
+	.icon-location:before
+		background-position: -226px -126px;
+		width: 16px;
+		height: 23px;
+
+	.contact_label
+		font-family: fPro
+		font-weight: fBold
+		font-size 13px
+		color #989898
+		text-transform uppercase
+		letter-spacing 2px
+		margin-bottom 22px
+	.contact_text
+		font-family: fPro
+		font-size 20px
+		color #d1d1d1
+		text-decoration none

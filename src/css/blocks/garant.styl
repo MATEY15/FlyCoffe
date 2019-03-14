@@ -1,0 +1,45 @@
+.garant
+	display: flex
+	width: 20%
+	position: relative
+
+	&:nth-child(even)
+		.garant
+			&_img
+				margin: 0
+			&_cloud
+				left: 25%
+
+	&_img
+		border-radius: 50%
+		overflow hidden
+		size: 300px
+		border: 16px solid #fff
+		box-sizing: border-box
+		display: block
+		margin: 0 auto
+	
+	&_cloud
+		white-space nowrap
+		position: absolute
+		top: 25%
+		lh: 28px
+		left: 55%
+		background: #fff
+		margin: auto
+		padding: 30px
+		border-radius: 8px
+		box-shadow: 11px 14px 34px 0px rgba(0, 0, 0, 0.06)
+		z-index: 3
+
+		span
+			fw fBold
+		
+		&:after
+			content: ''
+			icon("d-cloud.png")
+			position: absolute
+			top: 0
+			bottom: 0
+			left: -18px
+			margin: auto

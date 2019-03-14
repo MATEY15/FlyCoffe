@@ -1,0 +1,30 @@
+.coffee-num
+	size: 56px
+	border-radius: 50%
+	fz: 30px
+	c cBlack
+	ls -20
+	ffa fBebas
+	fw fBold
+	txta center
+	lh: 56px
+	position relative
+	z-index: 3
+	overflow hidden
+
+	&:before
+		content: ''
+		size: 100% 50%
+		position: absolute
+		bottom: 0
+		left 0
+		right: 0
+		background: cCoffee
+		z-index -1
+
+	&--big
+		size: 160px
+		lh: 160px
+		fz: 70px
+		c cWhite
+		mt: -20px

@@ -1,0 +1,93 @@
+.section--create-own-cup
+	size: 100vw 100vh
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 14
+	pointer-events: none
+	opacity: 0
+	transition: 0.6s ease all
+	background: cBlack
+
+	.header
+		.icon-text_text
+			c cGrayL
+			span
+				c cWhite
+		&_button
+			border-color cBlack
+	
+	.section
+		&_bg
+			z-index 1
+			baa()
+			position absolute 0
+			size: 100%
+			overflow hidden
+			transition: 1s ease transform
+			transition-delay: 0.6s
+			transform: translateX(100%)
+
+			&:after
+			&:before
+				background url(../img/bg-white.png)
+				top: 0
+				right: 0
+
+			&:before
+				size: 45% 100%
+			
+			&:after
+				right: 42%
+				top: -20%
+				size: 9% 150%
+				border-radius 50%
+
+		&_row
+			display: flex
+			align-content: center
+			height: 100vh
+		
+		&_cup
+		&_design
+			width: 50%
+			box-sizing: border-box
+
+		&_cup
+			display: flex
+			justify-content: center
+			align-items: center
+
+		&_design
+			position relative
+			pl: 110px
+			pt: 155px
+			z-index 20
+
+		&_content
+			position: relative
+			z-index: 3
+
+	&.js-active
+		pointer-events: auto
+		opacity: 1
+
+		.section
+			&_bg
+				transform: translateX(0)
+
+.cup-design_back-item
+	position absolute;
+	right 40px
+	top 160px
+	cursor pointer
+	transform translate(100px, 0)
+	transition .3s ease
+	z-index 10
+	opacity 0
+
+.js-active
+	.cup-design_back-item
+		transform translate(0, 0)
+		transition-delay: 1s
+		opacity 1

@@ -1,0 +1,40 @@
+.section--training
+	position relative
+	pt: 140px
+	//background: url(../img/bg-white.png)
+	z-index 9
+	
+	.background-left
+		position absolute
+		left 0
+		bottom -260px
+		width 415px
+		height 624px
+		background-image: url(../img/d-coffee-leaf.png)
+	
+	.background-right
+		position absolute
+		top -440px
+		right 0
+		width 676px
+		height 817px
+		background-image: url(../img/board-training.png)
+
+	.section
+		&_list
+			pl: calc((100vw - 1140px) / 2)
+		
+		&_content
+		&_title
+			mb: 24px
+		&_list
+			ml: 10px
+			mt: 130px
+			min-width 54%
+			box-sizing: border-box
+		&_slider
+			width: 46%
+			mt: 108px
+			overflow hidden
+		&_row
+			display: flex

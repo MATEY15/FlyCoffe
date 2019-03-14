@@ -1,0 +1,139 @@
+.slider-buttons
+	&--circle
+		display: flex
+		justify-content: flex-end
+		width: 100%
+		box-sizing: border-box
+		pr: 110px
+		.slider-buttons
+			&_prev
+			&_next
+				border-radius: 50%
+				ml: 16px
+				size: 64px
+				border: 1px solid cGrayL
+				box-sizing: border-box
+				position relative
+				cursor pointer
+				&:after
+					size: 8px
+					margin: auto
+					position: absolute 0
+					content: ''
+					border: 2px solid cGrayL
+					transform: rotate(45deg)
+				&:before
+					content: ''
+					size 100%
+					background: cBlack
+					position: absolute 0
+					border-radius: 50%
+					transform: scale(0)
+					transition: 0.4s ease all
+				&:hover:before
+					transform: scale(1)
+			&_prev:after
+				border-bottom-left-radius: 2px
+				border-width: 0 0 2px 2px
+				left: 4px
+			
+			&_next:after
+				border-top-right-radius: 2px
+				border-width: 2px 2px 0 0
+				right: 4px
+	
+	&--circle-white
+		display: flex
+		.slider-buttons
+			&_prev
+			&_next
+				opacity: 0
+				border-radius: 50%
+				ml: 16px
+				size: 54px
+				border: 1px solid cGrayL
+				box-sizing: border-box
+				position relative
+				cursor pointer
+				transition: 0.4s ease all
+				&.js-active
+					opacity: 1
+					transition-delay: 2.5s
+				&:after
+					size: 8px
+					margin: auto
+					position: absolute 0
+					content: ''
+					border: 2px solid cGrayL
+					transform: rotate(45deg)
+				&:before
+					content: ''
+					size 100%
+					background: cWhite
+					position: absolute 0
+					border-radius: 50%
+					transform: scale(0)
+					transition: 0.4s ease all
+				&:hover:before
+					transform: scale(1)
+			&_prev:after
+				border-bottom-left-radius: 2px
+				border-width: 0 0 2px 2px
+				left: 4px
+			
+			&_next:after
+				border-top-right-radius: 2px
+				border-width: 2px 2px 0 0
+				right: 4px
+
+	&--arrows
+		display: flex
+		justify-content: flex-start
+		width: 100%
+		box-sizing: border-box
+		mt: 45px
+		pl: 4px
+		height 16px
+		.slider-buttons
+			&_prev
+			&_next
+				size: 32px 16px
+				box-sizing: border-box
+				position relative
+				cursor pointer
+				transition: 0.4s ease width
+
+				&:hover
+					width: 100px
+
+				&:after
+					size: 8px
+					margin: auto
+					position: absolute 0
+					content: ''
+					border: 2px solid cGrayL
+					transform: rotate(45deg)
+				
+				&:before
+					content: ''
+					size: 100% 2px
+					background cGrayL
+					position: absolute 0
+					margin: auto
+					
+			
+			&_prev:after
+				border-bottom-left-radius: 2px
+				border-width: 0 0 2px 2px
+				left: 0
+				right auto
+			
+			&_next:after
+				border-top-right-radius: 2px
+				border-width: 2px 2px 0 0
+				right: 0
+				left auto
+		
+			&_next
+				ml: 35px
+				

@@ -1,0 +1,53 @@
+.shop-design
+	&_row
+		display: flex
+	&_img-wrapper
+		width: 60%
+		pt: 26px
+		pl: 10px
+		box-sizing: border-box
+	&_article
+		pt: 85px
+		pl: 90px
+		width: 40%
+		box-sizing: border-box
+
+	&_colors
+		mt: 44px
+		mb: 40px
+	
+	&_from
+	&_type
+		fz: 15px
+		ls: 20
+		c cGrayL
+	
+	&_price
+		mt: 28px
+		display: inline-block
+	&_cost
+		display: inline-block
+		fz: 65px
+		ls: 20
+		c cGrayL
+		ffa fBebas
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			icon("ic-rub.png")
+			top: 5px
+			right: -35px
+			transform: scale(0.6)
+		span
+			c cWhite
+			fw fBold
+			mr: 10px
+	&_type
+		mr: -30px
+		txta: right
+	
+	&_button
+		display: block
+		mt: 87px
+		ml: -40px

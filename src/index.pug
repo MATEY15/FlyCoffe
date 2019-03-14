@@ -1,0 +1,1052 @@
+extends layout.pug
+
+block prepend header
+	- var selected = 'index'
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.SECTION.section_.--create-cup#create-cup-screen
+		+e._header.header_
+			+e._content.content.--full
+				+e._column
+					+e.wrapper--logo
+						+e._logo.logo_
+							+e.IMG._logo(src="/img/logo-white.png" alt="logo")
+							+e.P._text
+								| Франшиза
+								br
+								|федеральной
+								br
+								|сети кофеен
+						+e._about.icon-text_
+							+e._icon.icon--coffee-cup
+							+e.P._text
+								| с 
+								+e.SPAN 2002&nbsp;
+								| года  
+								br
+								| в сфере гостеприимства
+					+e._contacts
+						+e.A(href="tel:88007079113")._phone.text--phone_
+							| 8 800 
+							span 707-91-13
+						+e.A(href="#popup-send")._button.button--call_.popup
+							| Обратный звонок
+		+e._content.content
+			+e._row-title
+				.back-item
+					span.
+						<svg width="64" version="1.1" class="back-icon back-step__one" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+						<g>
+						<path fill="#1D1D1B" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+						</g>
+						</svg>
+				+e._title#create-cup-screen-title
+					span С
+					span О
+					span З
+					span Д
+					span А
+					span Й
+					span Т
+					span Е 
+					span С
+					span В
+					span О
+					span Й 
+					span К
+					span Р
+					span Е
+					span А
+					span Т
+					span И
+					span В
+				+e._slider-buttons.slider-buttons_.--circle-white
+					+e._prev#slider-cups-prev
+					+e._next#slider-cups-next
+		+e._content.content--full.--sliders
+			+e._slider.slider_.--cups
+				+e._slider#slider-cups
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-black.png")
+							+e.IMG._body(src="/img/cups/cups-body-1.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-blue.png")
+							+e.IMG._body(src="/img/cups/cups-body-2.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-green.png")
+							+e.IMG._body(src="/img/cups/cups-body-3.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-purple.png")
+							+e.IMG._body(src="/img/cups/cups-body-4.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-white.png")
+							+e.IMG._body(src="/img/cups/cups-body-5.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-yellow.png")
+							+e.IMG._body(src="/img/cups/cups-body-6.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-black.png")
+							+e.IMG._body(src="/img/cups/cups-body-7.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-blue.png")
+							+e.IMG._body(src="/img/cups/cups-body-8.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-purple.png")
+							+e.IMG._body(src="/img/cups/cups-body-9.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-white.png")
+							+e.IMG._body(src="/img/cups/cups-body-10.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-black.png")
+							+e.IMG._body(src="/img/cups/cups-body-11.png")
+					+e._slide
+						+e._cup.cup_
+							+e.IMG._head(src="/img/cups/cups-head-blue.png")
+							+e.IMG._body(src="/img/cups/cups-body-12.png")
+	
+	+b.SECTION.section_.--create-own-cup#create-own-cup-screen
+		+e._bg
+		+e._header.header_
+			+e._content.content.--full
+				+e._row
+					+e.wrapper--logo
+						+e._logo.logo_
+							+e.IMG._logo(src="/img/logo-white.png" alt="logo")
+							+e.P._text
+								| Франшиза
+								br
+								|федеральной
+								br
+								|сети кофеен
+						+e._about.icon-text_
+							+e._icon.icon--coffee-cup
+							+e.P._text
+								| с 
+								+e.SPAN 2002&nbsp;
+								| года  
+								br
+								| в сфере гостеприимства
+					//- +e.wrapper--logo
+					//- 	+e._logo.logo_
+					//- 		+e.IMG._logo(src="/img/logo-white.png" alt="logo")
+					//- 		+e.P._text
+					//- 			| Франшиза-3
+					//- 			br
+					//- 			|федеральной
+					//- 			br
+					//- 			|сети кофеен
+						//- +e._about.icon-text_
+						//- 	+e._icon.icon--coffee-cup
+						//- 	+e.P._text
+						//- 		| с 
+						//- 		+e.SPAN 2002&nbsp;
+						//- 		| года  
+						//- 		br
+						//- 		| в сфере гостеприимства
+				+e._column
+					+e._socials.socials_.--white
+						+e.A._social.social_.--vk(href="#")
+							//+e.IMG._icon(src="/img/vk.svg")
+						+e.A._social.social_.--instagramm(href="#")
+							//+e.IMG._icon(src="/img/instagramm.svg")
+						+e.A._social.social_.--facebook(href="#")
+							//+e.IMG._icon(src="/img/facebook.svg")
+				//- +e._row
+				//- 	+e._about.icon-text_
+				//- 		+e._icon.icon--coffee-cup
+				//- 		+e.P._text
+				//- 			| с 
+				//- 			+e.SPAN 2002&nbsp;
+				//- 			| года  
+				//- 			br
+				//- 			| в сфере гостеприимства
+				//- 	+e._contacts
+				//- 		+e.A._phone.text--phone_
+				//- 			| 8 800 
+				//- 			span 707-91-13
+				//- 		+e.BUTTON._button.button--call_
+				//- 			| Обратный звонок
+		+e._content.content--full
+			+e._row
+				+e._cup
+					+b.cup_#create-own-cup
+						+e.IMG._head#create-own-cup-head(src="/img/cups/cups-head-yellow.png")
+						+e.IMG._body#create-own-cup-body(src="/img/cups/cups-body-6.png")
+				+e._design.cup-design_
+					+e.back-item
+						span.
+							<svg width="50" version="1.1" class="back-icon back-step__one" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+							<g>
+							<path fill="#1D1D1B" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+							</g>
+							</svg>
+					+e.H2._title
+						| СОЗДАть СВОЙ 
+						br
+						| ВАРИАНТ
+					+e._article.colors_
+						+e.P._title.--black Выберите цвет
+						+e._colors#cup-body-design-colors
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+					+e._article.colors_
+						+e.P._title.--black Крышка
+						+e._colors#cup-head-design-colors
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+					//- +e.BUTTON._button.button_.--black-full СОЗДАТЬ
+	+b.SECTION.section--hero
+		+e._bg
+			+e._bg-main
+			+e._bg-radius
+		+e._content.content
+			+e._row
+				+e._article.article--hero_
+					+e.H1._title--hero fly coffee
+					+e._row--text
+						+e.H2._title--white
+							| Сильный продукт 
+							br
+							| с креативным 
+							br
+							| подходом
+						+e.P._comment--hand-write
+							| Создаем незабываемую
+							br
+							| атмосферу
+							br
+							| и продумываем
+							br
+							| все детали
+							+e._icon.icon--lamp
+					+e._row--cta
+						+e.BUTTON._button.button--cta#create-cup-open Создать свой креатив
+						+e.BUTTON._play-with-cap
+							span Поиграть
+							br
+							| Со стаканом
+		+e._hand
+			+e._hand-main
+			//- +e._hand-left
+			//- +e._cup.cup_
+			//- 	+e.IMG._head(src="/img/cups/cups-head-yellow.png")
+			//- 	+e.IMG._body(src="/img/cups/cups-body-6.png")
+			//- +e._hand-right
+		
+	+b.SECTION.section--about#screen1
+		.bg-about-left
+		.bg-about-right
+		+e._content.content
+			+e.H2._title--wing
+				| УСПЕХ
+				br
+				| ПАРТНЕРОВ-
+				br
+				| наш успех!
+			+e._row
+				+e._article.article_.--about
+					+e._num.coffee-num 01
+					+e.H2._title--regular В чем суть
+					+e.P._text
+						| Зарабатываем не на вступительном 
+						br
+						| взносе, а на успехе наших партнёров
+					+e._line
+				+e.IMG._img(src="/img/about-1.png" alt="coffe man")
+			+e._row.item-reverse
+				+e.IMG._img(src="/img/about-2.png" alt="coffe man")
+				+e._article.article_.--about
+					+e._num.coffee-num 02
+					+e.H2._title--regular
+						| Контроль 
+						br
+						| качества
+					+e.P._text
+						| Наш продукт — не только кофе, но и продуманный 
+						br
+						| сервис. Разработали и внедрили жесткие 
+						br
+						| стандарты качества, всех аспектов работы кофейни
+					+e._line
+			+e._row
+				+e._article.article_.--about
+					+e._num.coffee-num 03
+					+e.H2._title--regular
+						| Гости возвращаются
+						br
+						| за атмосферой
+					+e.P._text
+						| Мы создаем симбиоз качественного,
+						br
+						| вкусного кофе и уникальной атмосферы
+					+e._line
+				+e.IMG._img(src="/img/about-3.png" alt="coffe man")
+
+	+b.SECTION.section--experience.default-background#screen2
+		.bg-experience-left
+		.bg-experience-right
+		+e._content.content
+			+e.H3._description--white Даже без опыта ведения бизнеса
+			+e.H2._title
+				| ВЫ СМОЖЕТЕ ОТКРЫТЬ
+				br
+				| ПРИБЫЛЬНУЮ КОФЕЙНЮ
+				br
+				| ПО ФРАНШИЗЕ
+			+e._row
+				+e.A(href="#popup-info")._icon-text.icon-text_.--horizontal.--white.popup
+					+e._icon.icon--people
+					+e._text
+						| Поможем выбрать или 
+						br
+						| предоставим точку 
+						br
+						| с высокой проходимостью
+				+e._icon-text.icon-text_.--horizontal.--white
+					+e._icon.icon--graph
+					+e._text
+						| Поддержим на всех этапах:
+						br
+						| от сбора документов до
+						br
+						| подбора и обучения персонала
+				+e._icon-text.icon-text_.--horizontal.--white
+					+e._icon.icon--doc
+					+e._text
+						| Предоставим вам доступ
+						br
+						| к пакету обучающих материалов 
+						br
+						| и интерактивной базе знаний
+				+e._icon-text.icon-text_.--horizontal.--white
+					+e._icon.icon--enigma
+					+e._text
+						| Прикрепим к вам 
+						br
+						| персонального менеджера, 
+						br
+						| который ответит 
+						br
+						| на любой вопрос 
+				+e._icon-text.icon-text_.--horizontal.--white
+					+e._icon.icon--student
+					+e._text
+						| Преподаватели нашего
+						br
+						| тренинг-центра научат вас
+						br
+						| эффективно вести бизнес
+				+e._icon-text.icon-text_.--horizontal.--white
+					+e._icon.icon--shop
+					+e._text
+						| Адаптируем кофе-бар под
+						br
+						| подходящую локацию
+
+	+b.SECTION.section--full-control.default-background
+		.bg-full-control
+		.board-full-control
+		+e._content--full.content--full
+			+e.IMG._img(src="img/full-control.png")
+			+e._header
+				+e.H2._title
+					| ПОЛНЫЙ КОНТРОЛЬ
+					br
+					| КОФЕЙНИ С НАШЕЙ
+					br
+					| CRM-СИСТЕМОЙ
+				+e.H3._description--white
+					span и поддержкой
+					+e._num.coffee-num--big 24/7
+		+e._content.content
+			+e._row
+				+e._icon-text.icon-text_.--vertical.--white
+					+e._icon.icon--phone
+					+e.H4._title Управляйте
+					+e.P._text
+						| Управляйте бизнесом 
+						br
+						| с любого устройства 
+						br
+						| с доступом в интернет
+				+e._icon-text.icon-text_.--vertical.--white
+					+e._icon.icon--discount
+					+e.H4._title Привлекайте
+					+e.P._text
+						| Привлекайте посетителей 
+						br
+						| программой лояльности, 
+						br
+						| акциями и скидками
+				+e._icon-text.icon-text_.--vertical.--white
+					+e._icon.icon--case
+					+e.H4._title Повышайте
+					+e.P._text
+						| Повышайте качество сервиса 
+						br
+						| с помощью  наших тайных 
+						br
+						| гостей и аудитов
+
+	+b.SECTION.section--garant.white-background#screen3
+		.bg-about-right-revers
+		+e._content.content
+			+e.H3._description НАШ ПРОДУКТ - это всегда
+			+e.H2._title
+				| ГАРАНТИЯ СТАБИЛЬНОГО
+				br
+				| ПОТОКА ГОСТЕЙ
+		+e._content.content--full
+			+e._row
+				+e._garant.garant_
+					+e.IMG._img(src="/img/garant-1.jpg" alt="coffee beans")
+					+e.P._cloud
+						| Свежеобжаренное 
+						span SPECIALTY зерно 
+						br
+						| не оставит равнодушным даже 
+						br
+						| избалованных гурманов
+				+e._garant.garant_
+					+e.IMG._img(src="/img/garant-2.jpg" alt="bread")
+					+e.P._cloud
+						span Более 15 видов 
+						| пирожных 
+						br
+						| и сендвичей, позволяют гостям 
+						br
+						| перекусить и насладиться напитками 
+				+e._garant.garant_
+					+e.IMG._img(src="/img/garant-3.jpg" alt="coffee cup")
+					+e.P._cloud
+						span БАРИСТА 
+						| - виртуозы холдера 
+						br
+						| и темпера. Гость станет 
+						br
+						| постоянным с первого глотка
+				+e._garant.garant_
+					+e.IMG._img(src="/img/garant-4.jpg" alt="coffee cup")
+					+e.P._cloud
+						| Специальные 
+						span сезонные предложения 
+						br
+						| позволяют гостям насладиться новыми 
+						br
+						| интересными напитками и блюдами 
+
+	+b.SECTION.section--instaramm
+		.bg-coffee-instagramm
+		+e._content.content--full
+			+e._row
+				+e._slider.slider_.--instaramm
+					+e._buttons.slider-buttons_.--circle
+						+e._prev#slider-instaramm-prev
+						+e._next#slider-instaramm-next
+					+e._slider#slider-instaramm
+						+e._slide
+							+e._slide-items
+								+e._items-img
+									+e.IMG._img(src="/img/iphone-1.jpg")
+								+e._row
+									+e.P._date 16.09.2018
+									+e.P._likes
+										+e.SPAN._icon.icon--like
+										| 256
+								+e.P._text
+									| Лига
+									br
+									| Бариста
+						+e._slide
+							+e._slide-items
+								+e._items-img
+									+e.IMG._img(src="/img/iphone-2.jpg")
+								+e._row
+									+e.P._date 16.09.2018
+									+e.P._likes
+										+e.SPAN._icon.icon--like
+										| 256
+								+e.P._text
+									| Лига
+									br
+									| Бариста
+						+e._slide
+							+e._slide-items
+								+e._items-img
+									+e.IMG._img(src="/img/iphone-3.jpg")
+								+e._row
+									+e.P._date 16.09.2018
+									+e.P._likes
+										+e.SPAN._icon.icon--like
+										| 256
+								+e.P._text
+									| Лига
+									br
+									| Бариста
+						+e._slide
+							+e._slide-items
+								+e._items-img
+									+e.IMG._img(src="/img/iphone-4.jpg")
+								+e._row
+									+e.P._date 16.09.2018
+									+e.P._likes
+										+e.SPAN._icon.icon--like
+										| 256
+								+e.P._text
+									| Лига
+									br
+									| Бариста
+						+e._slide
+							+e._slide-items
+								+e._items-img
+									+e.IMG._img(src="/img/iphone-1.jpg")
+								+e._row
+									+e.P._date 16.09.2018
+									+e.P._likes
+										+e.SPAN._icon.icon--like
+										| 256
+								+e.P._text
+									| Лига
+									br
+									| Бариста
+						+e._slide
+							+e._slide-items
+								+e._items-img
+									+e.IMG._img(src="/img/iphone-2.jpg")
+								+e._row
+									+e.P._date 16.09.2018
+									+e.P._likes
+										+e.SPAN._icon.icon--like
+										| 256
+								+e.P._text
+									| Лига
+									br
+									| Бариста
+			+e._slider.slider_.--iphone
+				+e._full-screen.button--full-screen
+				+e._slider#slider-iphone
+					+e._slide
+						+e._items-img
+							+e.IMG._img(src="/img/iphone-1.jpg")
+					+e._slide
+						+e._items-img
+							+e.IMG._img(src="/img/iphone-2.jpg")
+					+e._slide
+						+e._items-img
+							+e.IMG._img(src="/img/iphone-3.jpg")
+					+e._slide
+						+e._items-img
+							+e.IMG._img(src="/img/iphone-4.jpg")
+					+e._slide
+						+e._items-img
+							+e.IMG._img(src="/img/iphone-1.jpg")
+					+e._slide
+						+e._items-img
+							+e.IMG._img(src="/img/iphone-2.jpg")
+					
+
+	+b.SECTION.section--rules.default-background#screen4
+		.bg-top-rules
+		.bg-coffee-rules__one
+		.bg-coffee-rules__two
+		+e._content.content
+			+e.H2._title
+				| Честные условия
+				br
+				| для партнеров
+			+e._row
+				+e._rule.rule_
+					+e.P._title Роялти
+					+e._rule
+						+e.P._num--percent 
+							| 0
+							span %
+						+e.P._description
+							| В первые 12 мес.,
+							br
+							| потом 3%
+				+e._rule.rule_
+					+e.P._title Паушальный взнос
+					+e._row
+						+e._rule
+							+e.P._num--rub 
+								| 190
+								span 000
+							+e.P._description Для Москвы
+						+e._rule
+							+e.P._num--rub 
+								| 150
+								span 000
+							+e.P._description Для регионов
+			+e._row
+				+e._rule.rule_
+					+e.P._title Инвестиции от
+					+e._rule
+						+e.P._num--rub 
+							| 300
+							span 000
+						+e.P._description Для быстрого старта
+				+e._rule.rule_
+					+e.P._title Чистая прибыль от
+					+e._rule
+						+e.P._num--rub 
+							| 1 280
+							span 000
+						+e.P._description в год
+
+	+b.SECTION.section--download-plan.default-background#screen5
+		.bg-download-plan
+		+e._content.content--full
+			+e._row
+				+e.IMG._img(src="/img/d-catalog.png")
+				+e._article
+					+e._stamp
+					+e.H3._description.--white ПОЛУЧИТЕ ПОДРОБНЫЙ
+					+e.H2._title
+						| БИЗНЕС ПЛАН
+						br
+						| по вашему городу
+					+e._row
+						+e.P._text
+							| Расчитаем рентабельность
+							br
+							| вашей точки с точностью
+							br
+							| до 92%
+						+e.P._num
+							| 92
+							span %
+					+e.A(href="#popup-send")._button.button--download.--cta.popup ПОЛУЧИТЬ БИЗНЕС ПЛАН
+	
+	+b.SECTION.section--about-plan.white-background
+		.about-plan-bg
+		.about-left-bg
+		+e._content.content
+			+e.H3._description ЗАПУСК ОДНОЙ ТОЧКИ ЗАНИМАЕТ ОТ 2-х НЕДЕЛЬ
+			+e._title-row
+				+e.H2._title
+					| А ВЫХОД НА 
+					br
+					| ОКУПАЕМОСТь
+					br
+					| от 6 месяцев
+				+e._comment.article_.--comment
+					+e.P._title Запуск проходит 
+					+e.P._text
+						| в 3 этапа и на каждом 
+						br
+						| мы поддержим вас
+			+e._tabs.tabs_.--about-plan
+				+e._tabs
+					+e._tab.js-active(data-tab-about-plan="1")
+						| 01.
+						br
+						| Подготовка
+					+e._tab(data-tab-about-plan="2")
+						| 02.
+						br
+						| Открытие
+					+e._tab(data-tab-about-plan="3")
+						| 03.
+						br
+						| Поддержка
+				+e._progress-bar
+				+e._content
+					+e._tab-content.js-active(data-tab-about-plan="1")
+						+e.IMG._decor-1(src="/img/about-plan-1.png")
+						+e.IMG._img(src="/img/find-place.jpg")
+						+e.A(href="#popup-send")._download.popup
+							| Запросить график работы по октрытию
+							+e.SPAN._icon.icon--download-file
+					+e._tab-content(data-tab-about-plan="2")
+						+e.IMG._decor-2(src="/img/about-plan-2.png")
+						+e._list.list_.--about-plan
+							+e._item
+								+e._num 01
+								+e._line
+								+e.P._text
+									span Мы подготавливаем 
+									| индивидуальный дизайн-проект под ваше место
+							+e._item
+								+e._num 02
+								+e._line
+								+e.P._text
+									span Подбираем 
+									| и устанавливаем оборудование и инвентарь 
+							+e._item
+								+e._num 03
+								+e._line
+								+e.P._text
+									span Налаживаем 
+									| процессы поставки продукции 
+							+e._item
+								+e._num 04
+								+e._line
+								+e.P._text
+									span Обучаем вас 
+									| и сотрудников всем аспектам работы, в нашем учебном центре
+							+e._item
+								+e._num 05
+								+e._line
+								+e.P._text
+									span Вместе запускаем 
+									| кофейню и приветствуем первых гостей
+					+e._tab-content(data-tab-about-plan="3")
+						+e.IMG._decor-3(src="/img/about-plan-3.png")
+						+e._list.list_.--about-plan
+							+e._item
+								+e._num 01
+								+e._line
+								+e.P._text
+									span Закрепляем 
+									| личного менеджера, который доступен в рабочие часы
+							+e._item
+								+e._num 02
+								+e._line
+								+e.P._text
+									span Проводим аудит 
+									| вашей точки и присылаем тайных гостей, чтобы улучшить качество сервиса
+							+e._item
+								+e._num 03
+								+e._line
+								+e.P._text
+									span Обучаем 
+									| персонал для повышения квалификации
+							+e._item
+								+e._num 04
+								+e._line
+								+e.P._text
+									span Обновляем меню 
+									| и создаем специальные предложения для увеличения лояльности гостей
+	+b.SECTION.section--team.default-background#screen6
+		.bg-team
+		+e._content.content
+			+e._row
+				+e._article
+					+e.H2._title
+						| ВАС ПОДДЕРЖИТ КОМАНДА 
+						br
+						| С 10 летним ОПЫТОМ 
+						br
+						| В КОФЕЙНОМ БИЗНЕСЕ
+					+e.H3._description--comment.--white
+						| Запустивших более 30 кофеен
+						br
+						| в рамках других проектов
+				+e.IMG._stamp(src="/img/d-stamp.png" alt="coffee stamp")
+
+	+b.SECTION.section--design.default-background#screen7
+		.bg-design-coffee
+		+e._content.content
+			+e.H2._title
+				| Мы создаем уникальный 
+				br
+				| дизайн -проект
+			+e.H3._description.--white для каждого партнераx
+			+e._tabs.tabs_.--design
+				+e.P._title Формат
+				+e._tabs#shop-design-tabs
+					+e._tab(data-tab-design="island") Островок
+					+e._tab.js-active(data-tab-design="street") Уличная
+					+e._tab(data-tab-design="full") Полноформатная
+		+e._content.content--full
+			+e._design.shop-design_
+				+e._row
+					+e._img-wrapper
+						+e.IMG._img#shop-design-preview(src="/img/shop/street-yellow.png")
+					+e._article.colors_
+						+e.P._title Выберите цвет
+						+e._colors#shop-design-colors
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+							+e._color
+						+e.P._title Инвестиции
+						+e._price
+							+e.P._from от
+							+e.P._cost#shop-design-cost
+								span 750
+								| 000
+							+e.P._type#shop-design-type Уличная
+						+e.A(href="#popup-send")._button.button--cta.popup РАСЧИТАТЬ СТОИМОСТЬ ПРОЕКТА
+	+b.SECTION.section--promotion.default-background
+		.promotion-bg__one
+		.promotion-bg__left
+		.promotion-bg__right
+		+e._content.content
+			+e.H2._title
+				| СОСРЕДОТОЧьТЕСЬ
+				br
+				| на БИЗНЕСЕ
+			+e.H3._description.--white мы займемся рекламой
+			+e._list
+				+e._row
+					+e._img-wrapper
+						+e.IMG._img(src="/img/promo-1.png" alt="coffe cup")
+					+e._article.article_.--promotion
+						+e._icon-wrapper
+							+e._icon.icon--rupor
+						+e.P._title.--regular.--white
+							| Мы постоянно развиваем 
+							br
+							| узнаваемость бренда
+						+e.P._text.--white
+							| Публикуемся в сми, снимаем видео о компании,
+							br
+							| учавствуем в партнерских программах, 
+							br
+							| представляем бренд на выставках и не только
+						+e._line
+				+e._row.promotion-reverse
+					+e._article.article_.--promotion
+						+e._icon-wrapper
+							+e._icon.icon--camera
+						+e.P._title.--regular.--white
+							| Берем на себя фото
+							br
+							| и дизайн промо-
+							br
+							| материалов
+						+e.P._text.--white
+							| Предоставляем готовую айдентику нашим франчайзи: 
+							br
+							| флаеры, баннеры и другие рекламные материалы
+						+e._line
+					+e._img-wrapper
+						+e.IMG._img(src="/img/promo-2.png" alt="coffe cup")
+				+e._row
+					+e._img-wrapper
+						+e.IMG._img(src="/img/promo-3.png" alt="coffe cup")
+					+e._article.article_.--promotion
+						+e._icon-wrapper
+							+e._icon.icon--world
+						+e.P._title.--regular.--white
+							| Продвигаем бренд в ВК,
+							br
+							| Инстаграме и других сетях
+						+e.P._text.--white
+							| Регулярно публикуем рекламные посты в популярных 
+							br
+							| пабликах и развиваем свои. В будущем создадим 
+							br
+							| отдельные группы для регионов
+						+e._line
+	
+	+b.SECTION.section--training.white-background#screen9
+		.background-left
+		.background-right
+		+e._content.content
+			+e.H2._title
+				| У НАС ЕСТЬ СОБСТВЕННЫЙ
+				br
+				| ТРЕННИНГ-ЦЕНТР 
+				br
+				| ПЛОЩАДЬЮ 
+				+e.SPAN._square 240м
+			+e.H3._description Самый большой в индустрии
+		+e._content.content--full
+			+e._row
+				+e._list.list_.--training
+					+e._item
+						+e._num.coffee-num 01
+						+e.P._text
+							| Полное обучение собственников 
+							br
+							| позволяет избежать ошибок на запуске 
+							br
+							| и в управлении кофейней
+					+e._item
+						+e._num.coffee-num 02
+						+e.P._text
+							| Обучаем бариста по многоуровневой 
+							br
+							| методике,высокое качество напитков 
+							br
+							| и сервиса обеспечивает развитие кофейни
+					+e._item
+						+e._num.coffee-num 03
+						+e.P._text
+							| Наша команда выезжает в регионы 
+							br
+							| для запуска и адаптации кофейни
+					+e.A(href="#popup-send")._button.button--cta.--black.popup ХОЧУ ПЕРСОНАЛЬНУЮ ЭКСКУРСИЮ
+				+e._slider.slider_.--training
+					+e._slider#slider-training
+						+e._slide
+							+e.IMG._img(src="/img/training-1.jpg")
+						+e._slide
+							+e.IMG._img(src="/img/training-1.jpg")
+						+e._slide
+							+e.IMG._img(src="/img/training-1.jpg")
+					+e._buttons.slider-buttons_.--arrows
+						+e._prev#slider-training-prev
+						+e._next#slider-training-next
+	
+	+b.SECTION.section--business-model.white-background
+		.background-right
+		+e._content.content
+			+e.H2._title
+				| НАША БИЗНЕС-МОДЕЛЬ
+				br
+				| ЭФФЕКТИВНА ДАЖЕ
+				br
+				| в НЕБОЛЬШИХ ГОРОДАХ
+			+e.P._description--comment.--small
+				span В каком городе 
+				| вы планируете 
+				br
+				| открыть кофейню
+			+e.FORM._form.form_.--black.formValidate
+				INPUT(type="hidden" name="project_name" value="FLY COFFEE")
+				INPUT(type="hidden" name="admin_email" value="info@ligabar.ru")
+				INPUT(type="hidden" name="form_subject" value="Form MAP")
+				+e.wrapper-form
+					+e._field.field_
+						+e.LABEL._label ВВЕДИТЕ НАЗВАНИЕ ГОРОДА
+						+e.INPUT._input(type="text" name="cyti_input")
+					+e._field.field_
+						+e.LABEL._label ВАШ ТЕЛЕФОН
+						+e.INPUT._input(type="text" name="phone_input").phones-mask
+					+e._field.field_
+						+e.LABEL._label ВАЩ EMAIL
+						+e.INPUT._input(type="email" name="email_input")
+					+e._field.field_
+						LABEL().label-checked
+							INPUT(type="checkbox" name="check_input" checked data-required="Checkbox required").input-checked
+							P.checkbox__text обработка персональных данных
+					+e.BUTTON._button.button--submit.--cta(type="submit") Далее
+				+e._map
+					+e._map-icon
+
+	+b.SECTION.section--faq.default-background#screen10
+		.faq-background__one
+		.faq-background__two
+		+e._content.content
+			+e.H2._title
+				| ОТВЕТЫ НА ЧАСТО
+				br
+				| ЗАДАВАЕМЫЕ ВОПРОСЫ
+			+e._faq.list_.--faq
+				+e._item
+					+e._question
+						| В чем разница между открытием кофейни с нуля и покупкой франшизы
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Сколько времени уйдет на запуск, если место уже подобрано?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Как управлять персоналам? А если я обучу их, а они убегут к конкурентам? 
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Есть ли определенные требования для помещения под кофейню?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Откуда брать расходники? Все через вас или искать самому?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Я могу рассчитывать на помощь при работе с документами?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Если новый кофейный бизнес в реальности будет не настолько успешен как говорилось в договоре?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Как формируются цены и меню?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Как проходит учет и управление кофейней?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим qисследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+				+e._item
+					+e._question
+						| Если мне в пакетном предложении по франшизе не нравится конкретный пункт – мы можем его исключить из договора?
+					+e._answer
+						| Все кофе-бары созданы по индивидуальным проектам. Сначала мы проводим исследование в точке, где планируется открытие, и оцениваем движения трафика qв час-пик. Затем проектируем эргономичное пространство: в зоне большей видимости qрасполагаем место принятия заказов и меню, продумываем функциональные зоны qдля удобства работы кассира и бариста 
+	
+	+b.SECTION.section--help.default-background
+		.help-background__one
+		.help-background__left
+		.help-background__right
+		+e._content.content
+			+e.H2._title ОСТАЛИСЬ ВОПРОСЫ ?
+			+e.H3._description.--white
+				| Получите бесплатную консультацию
+				br
+				| вживую или по SKYPE
+			+e._row
+				+e._article.article_.--help.--location
+					+e.H3._title.--accent
+						| Запишитесь на встречу
+						br
+						| с командой в нашем
+						br
+						| офисе
+					+e.P._comment--hand-write
+						+e._icon.icon--pointer
+						| Москва, Шлюзовая 
+						br
+						| набережная 4
+					+e.A(href="#popup-send")._button.button--cta.popup ЗАПИсаться
+				+e._article.article_.--help.--skype
+					+e.H3._title.--gray-l
+						| Запишитесь на видео
+						br
+						| консультацию
+						br
+						| в Skype
+					+e.P._comment--hand-write
+						+e._icon.icon--skype
+						| flycoffee
+					+e.A(href="#popup-send")._button.button--cta.popup ЗАПИсаться

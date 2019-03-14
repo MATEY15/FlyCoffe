@@ -1,0 +1,68 @@
+.section--promotion
+	background: url(../img/bg-black.png)
+	pb: 180px
+	
+	.promotion-bg__one
+		position absolute
+		top -235px
+		left 0
+		width 871px
+		height 583px
+		background-image: url(../img/promotion-cup.png)
+		opacity .14
+	
+	.promotion-bg__left
+		position absolute
+		top 45%
+		left 0
+		width 244px
+		height 432px
+		background-image: url(../img/promotion-bg__left.png)
+		opacity .05
+	
+	.promotion-bg__right
+		position absolute
+		top 18%
+		right 0
+		min-height: height("promotion-bg__right.png")
+		min-width: width("promotion-bg__right.png")
+		background-image: url(../img/promotion-bg__right.png)
+		opacity .05
+
+	.section
+		&_title
+		&_description
+			txta: center
+		&_description
+			mt: 24px
+		&_row
+			display: flex
+			align-items: center
+			&:nth-child(odd)
+				.section
+					&_img-wrapper
+						min-width: 62.5%
+						ml: -125px
+			&:nth-child(even)
+				.section
+					&_img-wrapper
+						position: relative
+						mr: -85px
+						right: -85px
+		&_list
+			mt: 50px
+
+			.section_row
+				mt: 105px
+				&:nth-child(1)
+					mt: 0
+					.section_article
+						mt: 100px
+				
+				&:nth-child(2)
+					.section_article
+						mt: -15px
+
+				&:nth-child(3)
+					.section_article
+						mt: 45px

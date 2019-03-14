@@ -1,0 +1,75 @@
+.slider--cups
+	.slider
+		&_slide
+			width: 25vw
+			opacity: 0.4
+			transition: 0.4s ease opacity
+			position relative
+
+			&.slick-active
+				opacity: 1
+				cursor: pointer
+
+				&:hover
+					&:before
+					&:after
+						opacity: 1
+			
+			&:before
+			&:after
+				transition: 0.4s ease all
+				opacity: 0
+
+			&:before
+				z-index: 4
+				content: ''
+				position: absolute 0 
+				margin: auto
+				background: cCyan
+				size: 62px
+				border-radius: 50%
+				top: 22px
+				left: 4px
+				box-shadow: 0 0 16px 2px cCyan
+			
+			&:after
+				position: absolute 0 
+				top: 24px
+				left: 24px
+				content: '+'
+				z-index: 5
+				color: cWhite
+				margin: auto
+				size: 40px
+				fz: 32px
+
+		&_cup
+			display: block
+			margin: 0 auto
+		
+	.slick-dots
+		display: flex
+		opacity: 0
+		transition: 1s ease opacity
+		transition-delay: 2.5s
+
+		&.js-active
+			opacity: 1
+
+		li
+			flex: 1
+			height: 2px
+			background #202020
+			cursor pointer
+			display: block
+			transition: 0.4s ease all
+			button
+				c transparent
+				size: 100%
+				cursor pointer
+				pb: 20px
+			
+			&.slick-active
+				height: 4px
+				background cCyan
+				mt: -2px

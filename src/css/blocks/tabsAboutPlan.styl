@@ -1,0 +1,80 @@
+.tabs--about-plan
+	max-width: 75%
+	.tabs
+		&_tabs
+			display: flex
+			align-items: flex-end
+		&_tab
+			flex: 1
+			fz: 20px
+			lh 27px
+			ls 0
+			c cGrayL
+			fw fBlack
+			cursor pointer
+			min-height 82px
+			transition: 0.4s ease all
+			display: flex
+			align-items: flex-end
+			pb: 52px
+			bb: 4px solid transparent
+
+			&.js-active
+				c cBlack
+				fz 33px
+				lh 41px
+				bb: 4px solid cCyan
+		
+		&_progress-bar
+			size: 100% 2px
+			background: #eaeaea
+			mt: -3px
+		
+		&_content
+			mt: 70px
+			min-height: 430px
+			background: cBlack
+			border-radius: 4px
+			position: relative
+			z-index 10
+
+		&_download
+			position relative
+			display block
+			color cCyan
+			fz 14px
+			ls 0
+			lh 30px
+			txtd underline
+			mt: 30px
+			ml: 68px
+			cursor pointer
+
+		&_img
+			width: 100%
+			height: auto
+		
+		&_tab-content
+			min-height: inherit
+			position: absolute
+			top: 0
+			left: 0
+			display: none
+
+			&.js-active
+				display: block
+		
+		&_decor-1
+			position: absolute
+			top: -30%
+			left: 8%
+			
+		&_decor-2
+			position: absolute
+			top: 4.5%
+			left: 79.5%
+		
+		&_decor-3
+			position: absolute
+			top: 4%
+			left: 53%

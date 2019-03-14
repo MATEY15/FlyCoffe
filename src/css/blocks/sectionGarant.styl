@@ -1,0 +1,39 @@
+.section--garant
+	position relative
+	pt: 155px
+	//background: url(../img/bg-white.png)
+	
+	.bg-about-right-revers
+		position absolute
+		top 30%
+		left 0
+		display block
+		width 271px
+		height 723px
+		background: url(../img/d-coffee.png)
+		opacity: .6
+		transform rotateY(180deg)
+
+	.section
+		&_description
+			mb: 10px
+
+		&_row
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+		
+		&_garant
+			width: 50%
+			mt: 85px
+
+			&:nth-child(1)
+				.garant
+					&_img
+						transform: scale(0.75)
+			
+			
+			&:nth-child(4)
+				.garant
+					&_img
+						transform: scale(0.75)

@@ -1,0 +1,121 @@
+@import ("../../libs/template/reset.css")
+@import ("../../libs/template/lib")
+@import ("../../libs/template/media")
+
+@import ("libs/*.css")
+@import ("fonts")
+@import ("blocks/**/**")
+
+body
+	background: url(../img/bg-white.png)
+	overflow-x: hidden
+	min-width 320px
+
+.default-background
+	position relative
+	background linear-gradient(to right,#0c0b0b 0%,#101010 60%)
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ""
+		display block
+		width 100%
+		height 100%
+		background-image url(../img/Noise.png)
+		mix-blend-mode overlay
+		opacity .4
+
+.white-background
+	position relative
+	background linear-gradient(to right,#faf8f8 0,#fbfdfa 60%)
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ""
+		display block
+		width 100%
+		height 100%
+		background-image url(../img/Noise.png)
+		mix-blend-mode overlay
+		opacity 1
+
+
+/* CheckBox */
+
+.label-checked {
+	display: block;
+	margin-bottom: 14px;
+}
+// .checkbox:last-child {
+// 	margin-bottom: 0;
+// }
+.label-checked input {
+	position relative
+	visibility hidden
+	opacity: 0;
+	width 0
+}
+
+.checkbox__text {
+	position: relative;
+	color: rgba(255,255,255,.4);
+	font-size: 16px;
+	line-height: 18px;
+	padding: 0 0 0 40px;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checkbox__text:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	margin-top -6px
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	background-color: #19bfbb;
+	transition: all .2s ease;
+	opacity 0;
+}
+
+.checkbox__text:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top -11px
+	width: 22px;
+	height: 22px;
+	border-radius: 3px;
+	border: 2px solid #19bfbb;
+	background-color transparent;
+}
+
+.label-checked input.error ~ .checkbox__text:after {
+	border: 2px solid #0f3e39;
+}
+
+.label-checked input:checked ~ .checkbox__text:before {
+	//background: #535c7e;
+	opacity 1
+}
+
+.label-checked input:checked ~ .checkbox__text:after{
+	
+}
+
+/* CheckBox End */
+
+.mfp-close-btn-in .mfp-close {
+	color: rgba(255,255,255,.5) !important;
+	opacity 1
+}

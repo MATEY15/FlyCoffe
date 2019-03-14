@@ -1,0 +1,41 @@
+.slider--iphone
+	mt: 40px
+	position: relative
+	size: 370px 764px
+	background: cWhite
+	border-radius: 50px
+
+	.slick-slide
+		overflow hidden
+		border-radius: 50px
+
+	.slick-slide .slider_items-img
+		transition: all 500ms ease-in-out
+		transform: scale(1.25, 1.25)
+
+	.slick-active .slider_items-img
+		transform: scale(1, 1)
+
+	.slider
+		&_items-img
+			position relative
+			width 370px
+			height 760px
+			overflow hidden
+		&_img
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			width auto
+			height 100%
+			border-radius: 50px
+
+
+	&:after
+		content: ''
+		background-image: url(../img/iphone.png)
+		size: width("iphone.png") height("iphone.png")
+		position: absolute
+		top: -47px
+		left: -69px

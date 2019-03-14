@@ -1,0 +1,66 @@
+.section
+	&_description
+		ffa fBebas
+		fw fBold
+		txtt uppercase
+		fz: 40px
+		ls: 40
+		lh: 49px
+		c cBlack
+
+		&--white
+			c cWhite
+		
+		&--comment
+			pl: 101px
+			fz: 37px
+			ls: 100
+			lh: 50px
+			position relative
+			&:before
+				content: ''
+				position: absolute
+				size: 70px 1px
+				background: cGrayL
+				left: 0
+				top: 24px
+	
+		&--small
+			fz: 24px
+			lh: 35px
+			ls: 0
+			fw fRegular
+			txtt none
+			ffa fPro
+			span
+				fw fBold
+
+	&_title
+		c cCyan
+		fz: 95px
+		lh: 103px
+		ls: 0
+		fw fBold
+		ffa fBebas
+		txtt uppercase
+	
+		&--wing
+			display inline-block
+			txta center
+			fz: 120px
+			lh: 120px
+			baa()
+
+			&:before
+			&:after
+				top: 0
+				bottom: 0
+				margin: auto
+				icon("ic-wing.png")
+
+			&:before
+				left: -205px
+
+			&:after
+				right: -205px
+				transform: scaleX(-1)

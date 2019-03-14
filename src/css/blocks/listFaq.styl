@@ -1,0 +1,88 @@
+.list--faq
+
+	.list
+		&_item:hover
+			.list_question
+				c cCoffee
+				&:before
+					background: #fff
+		&_question
+			fz 22px
+			lh 36px
+			ls 0
+			fw fBold
+			c rgba(cWhite, 0.25)
+			pr 160px
+			mb: 31px
+			cursor pointer
+			position relative
+			transition: all 0.3s ease-out
+
+			&:before
+				border-radius: 50%
+				ml: 16px
+				size: 44px
+				box-sizing: border-box
+				position absolute
+				cursor pointer
+				right: 0
+				margin: auto
+				top: 0
+				content: ''
+				background: #8f8c8b
+				transition: all 0.3s ease-out
+
+			&:after
+				size: 8px
+				margin: auto
+				position: absolute
+				content: ''
+				border: 2px solid cBlack
+				transform: rotate(-135deg)
+				right 17px
+				top: -4px
+				border-width: 2px 0 0 2px
+				transition: all 0.3s ease-out
+			
+			&:before
+			&:after
+				bottom: 0
+				margin: auto
+			
+			&_prev:after
+				border-bottom-left-radius: 2px
+				border-width: 0 0 2px 2px
+				left: 4px
+		&_answer
+			fz 15px
+			lh 30px
+			ls 0
+			c cWhite
+			pl: 65px
+			position: relative
+			pb: 40px
+			display: none
+			&:before
+				content: ''
+				position: absolute
+				top: 16px
+				left: 0
+				size: 38px 1px
+				background rgba(cWhite, 0.25)
+		&_item
+			bb 1px solid rgba(cWhite, 0.25)
+			mb: 20px
+			&:last-child
+				border-bottom 0
+				margin-bottom 0
+
+			&.js-active
+				.list_question
+					c cCoffee
+
+					&:after
+						transform: rotate(45deg)
+						top: 4px
+					
+					&:before
+						background cWhite

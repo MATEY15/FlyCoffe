@@ -1,0 +1,108 @@
+.section--create-cup
+	size: 100vw 100vh
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 12
+	pointer-events: none
+	opacity: 0
+
+	.header
+		&_logo
+		&_button
+		&_phone
+		.icon-text_text
+			c cGrayL
+			span
+				c cWhite
+		
+		&_column
+			br: none
+			position: absolute
+			top: 0
+			right: 0
+			bottom: auto
+			left: 0
+			padding-left: 0
+			padding-right: 80px
+			display: flex
+			justify-content: space-between
+			bottom: auto
+		
+		&_logo
+			transform: translateX(-150px)
+			transition: 0.3s ease transform
+
+		&_about
+			transform: translateY(-100px)
+			transition: 0.3s ease transform
+		
+		&_phone
+			transform: translateY(-100px)
+			display: inline-block
+			transition: 0.3s ease transform
+		
+		&_button
+			transform: translateY(-100px)
+			transition: 0.3s ease transform
+	
+	.section
+		&_title
+			span
+				display: none
+		&_slider
+			mt: 4.5%
+			
+			.slick-track
+				pb: 4.5%
+		
+		&_slider .cup
+			display: none
+		
+		&_row-title
+			position relative
+			margin-top: 15.5%;
+			display: flex
+			justify-content: space-between
+			align-items: baseline
+			
+			.back-item
+				position absolute
+				right -150px
+				top 50%
+				cursor pointer
+				transform: translate(0, -60px)
+				transition: 0.3s ease
+				opacity 0
+			
+			.back-icon
+				width 50px
+				fill #fff
+				path
+					fill #fff
+
+	&.js-active
+		pointer-events: auto
+		opacity: 1
+
+		.back-item
+			transform translate(0, -50%)
+			transition-delay: 1s
+			opacity 1
+			
+		.header
+			&_logo
+				transform: translateX(0)
+				transition-delay: 0.7s
+
+			&_about
+				transform: translateY(0)
+				transition-delay: 0.8s
+			
+			&_phone
+				transform: translateY(0)
+				transition-delay: 0.9s
+			
+			&_button
+				transform: translateY(0)
+				transition-delay: 1s

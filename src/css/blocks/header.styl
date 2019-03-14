@@ -1,0 +1,41 @@
+headerRowWidth = 184px
+
+.header
+	position: relative
+	z-index: 11
+
+	&_row
+		position absolute 0 0 auto 0
+		pl 0
+		pr: 80px
+		max-height 100px
+		display flex
+		justify-content space-between
+		z-index 10
+
+	&_wrapper--logo
+		display flex
+		.header_about
+			margin-left 206px
+	
+	&_logo
+		width headerRowWidth
+	
+	&_column
+		position fixed 0 auto 0 0
+		min-width headerRowWidth
+		//- br 1px solid #242424
+
+	&_row
+	&_column
+		box-sizing border-box
+		pt 35px
+
+	&_socials
+		position absolute
+		top 40%
+		left 50%
+		transform translateX(-50%)
+	
+	&_phone
+		mr: 80px

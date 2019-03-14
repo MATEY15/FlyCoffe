@@ -1,0 +1,83 @@
+.footer
+	background: url(../img/bg-black.png)
+	padding-top 65px
+	padding-bottom 95px
+	border-top 1px solid #292929
+	.footer_row
+		position relative
+		display flex
+	.item-description
+		min-width 390px
+		.footer_about
+			margin-bottom 26px
+		.description-footer
+			font-family: fPro
+			font-weight: fBold
+			font-size 16px
+			line-height 28px
+			color #504f4f
+			text-transform uppercase
+			margin-bottom 69px
+		.copyright
+			font-family: fPro
+			font-size 14px
+			color #5a5a5a
+	.wrapper--item-list
+		.wrapper-user
+			margin-bottom 54px
+			&_link
+				position relative
+				font-family: fPro
+				font-weight: fBold
+				font-size 14px
+				text-transform uppercase
+				color #19bfbb
+				text-decoration none
+				&:hover:before
+					background rgba(25, 191, 187, 1)
+				&:before
+					position absolute
+					left 0
+					bottom 0
+					content ""
+					display block
+					width 100%
+					height 1px
+					background rgba(25, 191, 187, 0.5)
+					transition all .3s ease-out
+		.wrapper-list
+			display flex
+			.foot-list
+				min-width 265px
+				&_li
+					line-height 36px
+					&:hover
+						.foot-list_link
+							color #a0a0a0
+							margin-left 8px
+					&:first-child
+						padding-bottom 10px
+						line-height inherit
+					&:last-child
+						margin-bottom 0
+				&_link
+					position relative
+					font-family: fPro
+					font-size 14px
+					color #666
+					text-decoration none
+					transition all .25s ease-out
+					
+	.item-work
+		.name-work
+			font-family: fPro
+			font-weight: fBold
+			font-size 13px
+			text-transform uppercase
+			letter-spacing 2px
+			color #e0e0e0
+			margin-bottom 23px
+		.time-work
+			font-family: fPro
+			font-size 15px
+			color #8c8c8c

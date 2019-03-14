@@ -1,0 +1,50 @@
+.section--about
+	position relative
+	pt: 172px
+	z-index: 120
+	.bg-about-left
+		position absolute
+		top 35%
+		left 0
+		display block
+		width 231px
+		height 207px
+		background: url(../img/d-branch.png)
+		opacity: .6
+	
+	.bg-about-right
+		position absolute
+		top 45%
+		right 0
+		display block
+		width 271px
+		height 723px
+		background: url(../img/d-coffee.png)
+		opacity: .6
+
+	.section
+		&_content
+			display: flex
+			flex-direction: column
+		
+		&_title
+			margin: 0 auto 157px
+
+		&_row
+			align-items: center
+			display: flex
+			justify-content: space-between
+			mb: 108px
+		
+			&:nth-child(even)
+				.section
+					&_img
+						mr: -16%
+			
+			&:nth-child(odd)
+				.section
+					&_img
+						ml: -10%
+					&_article
+						position relative
+						left -1.2%

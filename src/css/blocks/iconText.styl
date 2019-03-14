@@ -1,0 +1,59 @@
+.icon-text 
+	display flex
+
+	&_text
+		pl: 20px
+		lh: 22px
+		ls: 0
+
+	&_title
+		ls 90
+		lh 36px
+		fz 27px
+		fw fBold
+		ffa fBebas
+
+	&--white
+		c cGrayL
+		fz 15px
+		span
+			c cWhite
+			fz 20px
+			fw fRegular
+		
+		.icon-text
+			&_title
+				c cWhite
+
+	&--horizontal
+		position: relative
+		pl: 70px
+		text-decoration none
+
+		.icon-text 
+			&_icon
+				position: absolute
+				left 0
+				top: -10px
+			
+			&_text
+				color #a0a0a0
+				font-size .9375rem
+				lh: 30px
+		
+	&--vertical
+		display: block
+		position: relative
+		pt: 92px
+
+		.icon-text 
+			&_icon
+				position: absolute
+				top: 0
+				left: 0
+			&_title
+				pb: 32px
+			&_text
+				pl: 0
+				ls: 80
+				lh: 30px
