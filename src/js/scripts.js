@@ -6,52 +6,83 @@
 //= jquery.validate.min.js
 //= PageScroll2id.min.js
 
+
 $(".nav-scroll li a").mPageScroll2id({
   offset: 0
 });
 
-var formValid = $(".main-form, .section--business-model").find('.formValidate');
+$(document).ready(function() {
 
-var errorRequired = formValid.find('input');
-var errorValueEnd;
-$.each(errorRequired, function(){
-  errorValueEnd = $(this).data('required');
-});
+  var formValid = $(".main-form, .section--business-model").find('.formValidate');
 
-formValid.click(function(){
-  $(this).validate({
-    rules: {
-      email_input: {
-        required: true,
-        email: true
-      },
-      name_input: {
-        required: true,
-      },
-      phone_input: {
-        required: true,
-      },
-      cyti_input: {
-        required: true,
-      }
-    },
-    messages: {
-      email_input: {
-        required: "Введите E-mail",
-        email: "Неверный E-mail"
-      },
-      name_input: {
-        required: "Введите Имя"
-      },
-      phone_input: {
-        required: "Введите Телефон"
-      },
-      cyti_input: {
-        required: "Введите название города"
-      }
-    },
-    errorElement: "span",
+  var errorRequired = formValid.find('input');
+  var errorValueEnd;
+  $.each(errorRequired, function(){
+    errorValueEnd = $(this).data('required');
   });
+
+  formValid.click(function(){
+    $(this).validate({
+      rules: {
+        email_input: {
+          required: true,
+          email: true
+        },
+        name_input: {
+          required: true,
+        },
+        phone_input: {
+          required: true,
+        },
+        check_input: {
+          required: true,
+        },
+        cyti_input: {
+          required: true,
+        }
+      },
+      messages: {
+        email_input: {
+          required: "Введите E-mail",
+          email: "Неверный E-mail"
+        },
+        name_input: {
+          required: "Введите Имя"
+        },
+        phone_input: {
+          required: "Введите Телефон"
+        },
+        cyti_input: {
+          required: "Введите название города"
+        },
+        check_input: {
+          required: "*"
+        }
+      },
+      errorElement: "span",
+      submitHandler: function (form) {
+       $.ajax({
+         type: "POST",
+         url: "mail.php",
+         data: $(form).serialize(),
+         success: function () {
+           $.magnificPopup.open({
+            items: {
+              src: '<div id="go_popup" class="main-form zoom-anim-dialoghid_popup"><div class="one_go_popup"><h4>Ваша заявка отправлена</h4><span>В ближайшее время с Вами свяжется<br>наш сотрудник.</span></div><div class="two_go_popup my_stl_btn"></div></div>',
+              type: 'inline'
+            }
+          });
+           $("form").trigger("reset");
+           setTimeout(function() {
+            $.magnificPopup.close();
+          }, 3000);
+         }
+       });
+       return false;
+     }
+    });
+  });
+
 });
 
 /* Popup Window */
@@ -59,9 +90,7 @@ formValid.click(function(){
 $(".popup").magnificPopup({
   type: 'inline',
   removalDelay: 300,
-  mainClass: 'my-mfp-slide-bottom',
-  //overflowY: 'scroll',
-  //fixedContentPos: true
+  mainClass: 'my-mfp-slide-bottom'
 });
 
 /* Popup Window End */
@@ -101,49 +130,49 @@ $("[data-close]").on("click", function(e) {
   closeModal(id);
 });
 
-$("form").submit(function(e) {
-  e.preventDefault();
-  var form = $(this);
-  var data = form.serializeArray();
-  var dataObject = {};
-  var validate = form.find('[data-req="true"]');
-  var send = true;
-  for (i = 0; i < data.length; i++) {
-    dataObject[data[i].name] = data[i].value;
-  }
-  $.each(validate, function(index, value) {
-    var value = $(value);
-    var key = value.attr("name");
-    if (dataObject[key] == "" || dataObject[key] == null) {
-      value.addClass("js-error");
-      console.log(key);
-      send = false;
-    } else {
-      value.removeClass("js-error");
-    }
-  });
-  if (send) {
-    console.log("Send");
-    cleararray = form.find('[data-clear="true"]');
-    $.each(cleararray, function(index, value) {
-      $(value).val("");
-    });
-    $.ajax(
-    {
-      method: "post",
-      url: "php/send.php",
-      data: data,
-      error: function(xhr, status, error) {
-        console.log(xhr.responseText + "|\n" + status + "|\n" + error);
-      }
-    },
-    "json"
-    );
-    $(".modal").fadeOut(300);
-    openModal("#modal-thx");
-    return false;
-  }
-});
+// $("form").submit(function(e) {
+//   e.preventDefault();
+//   var form = $(this);
+//   var data = form.serializeArray();
+//   var dataObject = {};
+//   var validate = form.find('[data-req="true"]');
+//   var send = true;
+//   for (i = 0; i < data.length; i++) {
+//     dataObject[data[i].name] = data[i].value;
+//   }
+//   $.each(validate, function(index, value) {
+//     var value = $(value);
+//     var key = value.attr("name");
+//     if (dataObject[key] == "" || dataObject[key] == null) {
+//       value.addClass("js-error");
+//       console.log(key);
+//       send = false;
+//     } else {
+//       value.removeClass("js-error");
+//     }
+//   });
+//   if (send) {
+//     console.log("Send");
+//     cleararray = form.find('[data-clear="true"]');
+//     $.each(cleararray, function(index, value) {
+//       $(value).val("");
+//     });
+//     $.ajax(
+//     {
+//       method: "post",
+//       url: "php/send.php",
+//       data: data,
+//       error: function(xhr, status, error) {
+//         console.log(xhr.responseText + "|\n" + status + "|\n" + error);
+//       }
+//     },
+//     "json"
+//     );
+//     $(".modal").fadeOut(300);
+//     openModal("#modal-thx");
+//     return false;
+//   }
+// });
 
 $("#slider-iphone").slick({
   arrows: false,
