@@ -310,8 +310,8 @@ var initializeShopDesign = function() {
     cost: ["750", "000"],
     colors: [
     {
-      color: "#dc7341",
-      preview: "island-1.png"
+      color: "#9bb9c6",
+      preview: "island-9.png"
     },
     {
       color: "#8eb863",
@@ -342,8 +342,8 @@ var initializeShopDesign = function() {
       preview: "island-8.png"
     },
     {
-      color: "#9bb9c6",
-      preview: "island-9.png"
+      color: "#dc7341",
+      preview: "island-1.png"
     },
     {
       color: "#68bac1",
