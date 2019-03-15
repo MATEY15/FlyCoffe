@@ -129,20 +129,29 @@ html(lang="ru")
 			+e._content.content
 				+e._row.list--contacts
 					+e._item.contact_.--phone
-						+e._icon.icon-phone-foot
+						//- +e._icon.icon-phone-foot
+						+e._icon.foot-circle--icon
+							SVG.telephone-icon
+								USE(xlink:href="/img/sprite.svg#telephone-icon")
 						+e._text-info
 							+e.P._label телефон
 							+e.A(href="tel:88007079113")._text 8 800 707 91 13
 					+e._item.contact_.--phone
-						+e._icon.icon-email
+						//- +e._icon.icon-email
+						+e._icon.foot-circle--icon
+							SVG.mail-icon
+								USE(xlink:href="/img/sprite.svg#mail-icon")
 						+e._text-info
 							+e.P._label Email
 							+e.A(href="mailto:info@flycoffee.ru")._text INFO@FLYCOFFEE.ru 
 					+e._item.contact_.--phone
-						+e._icon.icon-location
+						//- +e._icon.icon-location
+						+e._icon.foot-circle--icon
+							SVG.pin-icon
+								USE(xlink:href="/img/sprite.svg#pin-icon")
 						+e._text-info
 							+e.P._label АДРЕС
-							+e.P._text Москва, Проспект мира 102
+							+e.P._text Москва, Большая Почтовая 36
 		+b.FOOTER.footer_.default-background
 			+e._content.content
 				+e._row
@@ -156,11 +165,9 @@ html(lang="ru")
 								br
 								| в сфере гостеприимства
 						p.description-footer
-							| Франшиза эксклюзивных
+							| Франшиза креативных кофеен  
 							br
-							| кофе-баров в формате
-							br
-							| «кофе с собой»
+							| разных форматов
 						p.copyright
 							| 2019 © Все права защищены
 					+e.item.wrapper--item-list

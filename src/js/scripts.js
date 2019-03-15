@@ -364,8 +364,8 @@ var initializeShopDesign = function() {
     cost: ["1750", "000"],
     colors: [
     {
-      color: "#dc7341",
-      preview: "street-1.png"
+      color: "#a3c9d9",
+      preview: "street-4.png"
     },
     {
       color: "#8eb863",
@@ -376,8 +376,8 @@ var initializeShopDesign = function() {
       preview: "street-3.png"
     },
     {
-      color: "#a3c9d9",
-      preview: "street-4.png"
+      color: "#dc7341",
+      preview: "street-1.png"
     },
     {
       color: "#535c7e",
@@ -418,8 +418,8 @@ var initializeShopDesign = function() {
     cost: ["2750", "000"],
     colors: [
     {
-      color: "#dc7341",
-      preview: "full-1.png"
+      color: "#68bac1",
+      preview: "full-10.png"
     },
     {
       color: "#8eb863",
@@ -454,8 +454,8 @@ var initializeShopDesign = function() {
       preview: "full-9.png"
     },
     {
-      color: "#68bac1",
-      preview: "full-10.png"
+      color: "#dc7341",
+      preview: "full-1.png"
     },
     {
       color: "#faf8f6",
@@ -547,8 +547,8 @@ function initializeCupDesign() {
   var cups = {
     body: [
     {
-      color: "#dc7341",
-      preview: "cups-body-1.png"
+      color: "#68bac1",
+      preview: "cups-body-10.png"
     },
     {
       color: "#8eb863",
@@ -556,7 +556,7 @@ function initializeCupDesign() {
     },
     {
       color: "#49495c",
-      preview: "cups-body-3.png"
+      preview: "cups-body-11.png"
     },
     {
       color: "#a3c9d9",
@@ -568,7 +568,7 @@ function initializeCupDesign() {
     },
     {
       color: "#212130",
-      preview: "cups-body-6.png"
+      preview: "cups-body-8.png"
     },
     {
       color: "#4ca2a8",
@@ -576,23 +576,23 @@ function initializeCupDesign() {
     },
     {
       color: "#806eb2",
-      preview: "cups-body-8.png"
+      preview: "cups-body-3.png"
     },
     {
       color: "#9bb9c6",
       preview: "cups-body-9.png"
     },
     {
-      color: "#68bac1",
-      preview: "cups-body-10.png"
+      color: "#dc7341",
+      preview: "cups-body-6.png"
     },
     {
       color: "#e6e6e5",
-      preview: "cups-body-11.png"
+      preview: "cups-body-1.png"
     },
     {
       color: "#f9ed66",
-      preview: "cups-body-12.png"
+      preview: "cups-body-8.png"
     }
     ],
     head: [
