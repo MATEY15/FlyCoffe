@@ -5,6 +5,7 @@
 //= jquery.maskedinput.min.js
 //= jquery.validate.min.js
 //= PageScroll2id.min.js
+//= jquery.overlayScrollbars.js
 
 
 $(".nav-scroll li a").mPageScroll2id({
@@ -12,6 +13,18 @@ $(".nav-scroll li a").mPageScroll2id({
 });
 
 $(document).ready(function() {
+
+
+  $('.posonal-info').click(function(){
+$('.porsone-information').addClass('is-active');
+  });
+  $('.closed--porsone-information').click(function(){
+$('.porsone-information').removeClass('is-active');
+  });
+
+  $(function() {
+    $('.porsone-scroll').overlayScrollbars({});
+  });
 
   var formValid = $(".main-form, .section--business-model").find('.formValidate');
 
@@ -25,7 +38,7 @@ $(document).ready(function() {
     $(this).validate({
       rules: {
         email_input: {
-          required: true,
+          //required: true,
           email: true
         },
         name_input: {
@@ -191,7 +204,7 @@ $("#slider-instaramm").slick({
   mobileFirst:true,
   responsive: [
   {
-    breakpoint: 1300,
+    breakpoint: 1440,
     settings: {
       slidesToShow: 4,
     }
@@ -308,10 +321,9 @@ var initializeShopDesign = function() {
   {
     typeName: "Островок",
     cost: ["750", "000"],
-    colors: [
-    {
-      color: "#9bb9c6",
-      preview: "island-9.png"
+    colors: [    {
+      color: "#3f4557",
+      preview: "island-10.png"
     },
     {
       color: "#8eb863",
@@ -346,8 +358,8 @@ var initializeShopDesign = function() {
       preview: "island-1.png"
     },
     {
-      color: "#68bac1",
-      preview: "island-10.png"
+      color: "#9bb9c6",
+      preview: "island-9.png"
     },
     {
       color: "#faf8f6",
@@ -381,7 +393,7 @@ var initializeShopDesign = function() {
     },
     {
       color: "#535c7e",
-      preview: "street-5.png"
+      preview: "street-10.png"
     },
     {
       color: "#212130",
@@ -393,15 +405,15 @@ var initializeShopDesign = function() {
     },
     {
       color: "#806eb2",
-      preview: "street-8.png"
-    },
-    {
-      color: "#9bb9c6",
       preview: "street-9.png"
     },
     {
-      color: "#68bac1",
-      preview: "street-10.png"
+      color: "#9bb9c6",
+      preview: "street-8.png"
+    },
+    {
+      color: "#536390",
+      preview: "street-5.png"
     },
     {
       color: "#faf8f6",

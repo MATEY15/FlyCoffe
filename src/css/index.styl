@@ -122,7 +122,7 @@ body
 
 /* Sprite */
 
-.icon-text--horizontal .icon-text_icon
+.icon--svg
 	fill #dda665
 .people-group
 	width 63px
@@ -139,6 +139,19 @@ body
 .restaraun-icon
 	width 53px
 	height 47px
+.person-icon
+	width 46px
+	height 50px
+.smartphone
+	width 56px
+	height 56px
+	left -12px !important
+.discount-icon
+	width 54px
+	height 54px
+.businessman-icon
+	width 60px
+	height 60px
 
 .contact_icon
 	svg
@@ -156,3 +169,55 @@ body
 	.pin-icon
 		width 20px
 		height 20px
+
+.posonal-info,
+.person-popup
+	position relative
+	display block
+	color rgb(25, 191, 187)
+	font-size 14px
+	text-decoration none
+	padding 0 0 0 40px
+	cursor pointer
+	margin-top -6px
+
+.porsone-information
+	position absolute
+	top 0
+	left 0
+	width 100%
+	max-width 460px
+	height 525px
+	font-family: GothamPro;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	color: #dfdfdf;
+	background: #070707
+	padding 30px
+	padding-right 10px
+	z-index 0
+	opacity 0
+	visibility hidden
+	transition all .25s ease-out
+	&.is-active
+		opacity 1
+		visibility visible
+		z-index 2000
+	.closed--porsone-information
+		position absolute
+		display flex
+		width 30px
+		height 34px
+		justify-content center
+		align-items center
+		font-size 22px
+		right 0
+		top 0
+		cursor pointer
+
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle
+	background: rgba(195, 195, 195, 0.8)
+.porsone-scroll
+	height 100%
+	p
+		padding-right 30px
