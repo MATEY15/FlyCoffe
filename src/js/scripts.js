@@ -14,12 +14,54 @@ $(".nav-scroll li a").mPageScroll2id({
 
 $(document).ready(function() {
 
+  /* Map */
+
+  if($('div').is('.form_map')){
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map-form', {
+        center: [55.780810, 37.696894],
+        zoom: 15,
+        //controls: ['smallMapDefaultSet']
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/ic-map-icon.png',
+            iconImageSize: [82, 99],
+            iconImageOffset: [-41, -99]
+          });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+        myMap.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullsxreenControl').remove('rullerControl');
+        //myMap.controls.add(zoomControl, { float: 'none', position: {right: '50px', top: '250px'} });
+        //myMap.control.ZoomControl([parameters.options.position.left]);
+        myMap.controls.add('zoomControl', {
+          float: 'none',
+          position: {
+            left: 50,
+            top: 330
+          }
+        });
+      });
+  }
+
+  /* Map End */
+
 
   $('.posonal-info').click(function(){
-$('.porsone-information').addClass('is-active');
+    $('.porsone-information').addClass('is-active');
   });
   $('.closed--porsone-information').click(function(){
-$('.porsone-information').removeClass('is-active');
+    $('.porsone-information').removeClass('is-active');
   });
 
   $(function() {
@@ -376,8 +418,8 @@ var initializeShopDesign = function() {
     cost: ["1750", "000"],
     colors: [
     {
-      color: "#a3c9d9",
-      preview: "street-4.png"
+      color: "#535c7e",
+      preview: "street-10.png"
     },
     {
       color: "#8eb863",
@@ -392,8 +434,8 @@ var initializeShopDesign = function() {
       preview: "street-1.png"
     },
     {
-      color: "#535c7e",
-      preview: "street-10.png"
+      color: "#a3c9d9",
+      preview: "street-4.png"
     },
     {
       color: "#212130",
