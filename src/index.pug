@@ -249,7 +249,8 @@ block prepend main
 							| все детали
 							+e._icon.icon--lamp
 					+e._row--cta
-						+e.BUTTON._button.button--cta#create-cup-open Создать свой креатив
+						//- +e.BUTTON._button.button--cta#create-cup-open Создать свой креатив
+						+e.A(href="#popup-send")._button.button--download.--cta.popup Оставить заявку
 						+e.BUTTON._play-with-cap
 							span Поиграть
 							br
@@ -777,7 +778,7 @@ block prepend main
 						br
 						| В КОФЕЙНОМ БИЗНЕСЕ
 					+e.H3._description--comment.--white
-						| Запустивших более 30 кофеен
+						| Запустивших более 50 кофеен
 						br
 						| в рамках других проектов
 				+e.IMG._stamp(src="/img/d-stamp.png" alt="coffee stamp")
@@ -789,7 +790,7 @@ block prepend main
 				| Мы создаем уникальный 
 				br
 				| дизайн -проект
-			+e.H3._description.--white для каждого партнераx
+			+e.H3._description.--white для каждого партнера
 			+e._tabs.tabs_.--design
 				+e.P._title Формат
 				+e._tabs#shop-design-tabs
@@ -1055,9 +1056,9 @@ block prepend main
 						| офисе
 					+e.P._comment--hand-write
 						+e._icon.icon--pointer
-						| Москва, Шлюзовая 
+						| Москва 
 						br
-						| набережная 4
+						| Большая Почтовая 36
 					+e.A(href="#popup-send")._button.button--cta.popup ЗАПИсаться
 				+e._article.article_.--help.--skype
 					+e.H3._title.--gray-l
